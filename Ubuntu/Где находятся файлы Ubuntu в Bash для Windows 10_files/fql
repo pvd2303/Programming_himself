@@ -1,0 +1,8 @@
+/**/ jQuery111207201905360593802_1585758072759({
+   "error": {
+      "message": "(#12) fql is deprecated for versions v2.1 and higher",
+      "type": "OAuthException",
+      "code": 12,
+      "fbtrace_id": "AK8C1UjDmB_RhLKy2Cnm2E6"
+   }
+});

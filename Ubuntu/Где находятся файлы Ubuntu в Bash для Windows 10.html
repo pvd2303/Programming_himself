@@ -1,0 +1,1155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><head><script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/share_count"></script><script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/fql"></script><script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/count.json"></script><script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/share"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Где находятся файлы Ubuntu в Bash для Windows 10?</title>
+<meta name="description" content="Устанавливая Bash для Windows 10, вы получаете практически полноценный дистрибутив Ubuntu с необходимым пользовательским окружением. При желании доступ к файлам Linux можно получить прямо из">
+<meta name="keywords" content="Windows, каждого, Linux, файлов, Ubuntu, папка, Скрытые, элементы, придётся, предварительно, наверное, отображение, скрытых, включить, создаётся, модификации, нужно, учитывать, поиске, подсистема">
+<meta name="generator" content="DataLife Engine (http://dle-news.ru)">
+<meta property="og:site_name" content="Сообщество пользователей Windows 10">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Где находятся файлы Ubuntu в Bash для Windows 10?">
+<meta property="og:url" content="http://www.wincore.ru/advices/4467-gde-nahodyatsya-fayly-ubuntu-v-bash-dlya-windows-10.html">
+<meta property="og:image" content="http://www.wincore.ru/uploads/posts/2016-07/thumbs/1468320377_image-10271313.jpg">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.wincore.ru/engine/opensearch.php" title="Сообщество пользователей Windows 10">
+<link rel="alternate" type="application/rss+xml" title="Сообщество пользователей Windows 10" href="http://www.wincore.ru/rss.xml">
+<script src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/cbgapi.loaded_0" async=""></script><script type="text/javascript" async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/context.js" async=""></script><script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/context.js" async=""></script><script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/context.js" async=""></script><script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/context.js" async=""></script><script type="text/javascript" async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ga.js"></script><script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/jquery.js"></script>
+<script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/jqueryui.js"></script>
+<script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/dle_js.js"></script>
+<script type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/highslide.js"></script>
+<meta charset="windows-1251">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="http://www.wincore.ru/templates/wincorenew/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.wincore.ru/apple-touch.png">
+<link rel="apple-touch-icon-precomposed" href="http://www.wincore.ru/apple-touch.png">
+<link media="screen" href="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/engine.css" type="text/css" rel="stylesheet">
+<link href="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/bootstrap.css" rel="stylesheet">
+<link href="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/main.css" rel="stylesheet">
+<link href="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/bootstrap-theme.css" rel="stylesheet">
+<link href="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/social-likes_birman.css" rel="stylesheet">
+    
+<meta name="application-name" content="WinCore">
+
+
+    
+<script src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/bootstrap.js"></script>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3929613-15']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    
+
+    
+<script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2341767616098055",
+    enable_page_level_ads: true
+  });
+</script>
+
+<style type="text/css">.highslide img {cursor: url(/engine/classes/highslide/graphics/zoomin.cur), pointer !important;}.highslide-viewport-size {position: fixed; width: 100%; height: 100%; left: 0; top: 0}</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<script type="text/javascript">
+<!--
+var dle_root       = '/';
+var dle_admin      = '';
+var dle_login_hash = '';
+var dle_group      = 5;
+var dle_skin       = 'wincorenew';
+var dle_wysiwyg    = '0';
+var quick_wysiwyg  = '0';
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Сохранить", "Удалить", "Загрузка. Пожалуйста, подождите..."];
+var menu_short     = 'Быстрое редактирование';
+var menu_full      = 'Полное редактирование';
+var menu_profile   = 'Просмотр профиля';
+var menu_send      = 'Отправить сообщение';
+var menu_uedit     = 'Админцентр';
+var dle_info       = 'Информация';
+var dle_confirm    = 'Подтверждение';
+var dle_prompt     = 'Ввод информации';
+var dle_req_field  = 'Заполните все необходимые поля';
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+var dle_spam_agree = 'Вы действительно хотите отметить пользователя как спамера? Это приведёт к удалению всех его комментариев';
+var dle_complaint  = 'Укажите текст Вашей жалобы для администрации:';
+var dle_big_text   = 'Выделен слишком большой участок текста.';
+var dle_orfo_title = 'Укажите комментарий для администрации к найденной ошибке на странице';
+var dle_p_send     = 'Отправить';
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+var dle_save_ok    = 'Изменения успешно сохранены. Обновить страницу?';
+var dle_del_news   = 'Удалить статью';
+var allow_dle_delete_news   = false;
+//-->
+</script><script type="text/javascript">
+<!--
+	hs.graphicsDir = '/engine/classes/highslide/graphics/';
+	hs.wrapperClassName = 'wide-border';
+	hs.numberOfImagesToPreload = 0;
+	hs.showCredits = false;
+	hs.dimmingOpacity = 0.60;
+	hs.lang = {
+		loadingText :     'Загрузка...',
+		playTitle :       'Просмотр слайдшоу (пробел)',
+		pauseTitle:       'Пауза',
+		previousTitle :   'Предыдущее изображение',
+		nextTitle :       'Следующее изображение',
+		moveTitle :       'Переместить',
+		closeTitle :      'Закрыть (Esc)',
+		fullExpandTitle : 'Развернуть до полного размера',
+		restoreTitle :    'Кликните для закрытия картинки, нажмите и удерживайте для перемещения',
+		focusTitle :      'Сфокусировать',
+		loadingTitle :    'Нажмите для отмены'
+	};
+	
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.addSlideshow({
+		interval: 4000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			opacity: .75,
+			position: 'bottom center',
+			hideOnMouseOut: true
+		}
+	});
+//-->
+</script>
+    
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+  
+        <div class="navbar-header">
+          
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">       
+              
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+              
+          </button>
+            
+    
+      
+                
+          <div class="navbar-toggle" style="margin-right:3px;"><a href="#siteauthlink" style="color:#fff"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></div>
+          
+
+
+          
+            
+               
+          
+<div class="logo clearfix"> 
+        <a href="http://www.wincore.ru/" class="link_home"></a>
+    <div class="logoimg"></div> 
+    <div class="textover"> 
+        Сообщество пользователей Windows 10
+    </div> 
+</div> 
+
+        </div>
+        
+        <div class="clearfix"></div>
+        <div class="collapse navbar-collapse ">
+          <ul class="nav nav-stacked" id="menu-bar">
+				<li><a href="http://www.wincore.ru/windows-news/">Последние новости</a></li>
+					<li><a href="http://www.wincore.ru/advices/">Советы и инструкции</a></li>
+					<li><a href="http://www.wincore.ru/programs/">Приложения и программы</a></li>
+					<li><a href="http://www.wincore.ru/games/">Игры и развлечения</a></li>
+					<li><a href="http://www.wincore.ru/system-design/">Оформление системы</a></li>
+					<li><a href="http://www.wincore.ru/hardware/">Устройства и железо</a></li>
+              <li><a href="http://www.wincore.ru/forum/">Форум сообщества</a></li>
+          </ul>
+
+          
+        </div>
+        
+        
+     
+        <div class="copyright">
+       
+          <div class="copyright-text">© 2011–2019 WinCore — всё для пользователя Windows 10<br>и Windows 10 Mobile.</div>
+        </div>
+   
+        
+        
+      </div>
+      <div class="clearfix"></div>
+      
+
+
+<div class="content">
+<div class="container-fluid">
+    
+<div class="row" style="background:#F6F6F6; ">
+<div class="col-lg-8" style="padding:0px;  background:#FFF; padding-top:25px;">
+  	
+
+
+<div class="maintitilepage">
+   
+   
+   
+   
+
+  
+    
+      
+    
+      
+          
+    
+     </div>
+
+    
+                      
+
+    
+
+
+
+
+<div id="dle-content"><div class="favadd clearfix"></div>
+<div class="maintitilepage2"><h1>Где находятся файлы Ubuntu в Bash для Windows 10?</h1></div>
+
+<div class="vvodnik"> Устанавливая Bash для Windows 10, вы получаете 
+практически полноценный дистрибутив Ubuntu с необходимым 
+пользовательским окружением. При желании доступ к файлам Linux можно 
+получить прямо из Проводника Windows. 
+
+
+</div>
+<div class="catlinks3 clearfix"><a href="http://www.wincore.ru/advices/"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/cat3.gif" alt="Советы и инструкции"> <div style="padding-top:14px;  float:left;">Советы и инструкции</div></a> <div style="padding-top:14px;  float:left; color: #C6C6C6; margin-left:15px; margin-right:15px; margin-bottom:15px;">| &nbsp; 12 июля 2016 в 13:40  </div>
+<div class="activity3">
+<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 29839 &nbsp; 
+        <a href="#" onclick="doRate('plus', '4467'); return false;"><span class="glyphicon glyphicon glyphicon-heart" style="margin-right:-8px;"></span><span data-ratig-layer="4467" class="ignore-select"><span class="ratingtypeplus ignore-select">10</span></span></a>  &nbsp; <a id="dle-comm-link" href="http://www.wincore.ru/advices/4467-gde-nahodyatsya-fayly-ubuntu-v-bash-dlya-windows-10.html#comment"><span class="glyphicon glyphicon-comment"></span> 9</a> &nbsp; 
+	</div>
+
+</div>
+
+
+
+<div class="bannerblock1">    
+    <div class="mainpostinfo clearfix">
+<script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- WinCore Adaptive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2341767616098055" data-ad-slot="1158360007" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    
+    </div>
+</div>      
+
+
+
+<div class="mainpostinfo clearfix">
+
+<div class="row">
+
+<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+<div class="infolinks"><div class="nviewsfull"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" style="font-size:24px;"></span><br>29839</div>
+<div class="clearfix"><a href="#" onclick="doRate('plus', '4467'); return false;"><div class="nlikesfull"><span class="glyphicon glyphicon-heart" style="font-size:22px;"></span><br> <span data-ratig-layer="4467" class="ignore-select"><span class="ratingtypeplus ignore-select">10</span></span></div></a>
+<a id="dle-comm-link" href="http://www.wincore.ru/advices/4467-gde-nahodyatsya-fayly-ubuntu-v-bash-dlya-windows-10.html#comment"><div class="ncommsfull"><span class="glyphicon glyphicon-comment" style="font-size:20px; margin-bottom:1px;"></span><br> 9</div></a></div>
+</div>
+
+</div>    
+
+<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+<div class="maintextpost">
+ <p>Файлы Bash on Ubuntu on Windows доступны в папке&nbsp;<em>C:\Users\имя_пользователя\AppData\Local\lxss\</em>. По умолчанию эта папка скрыта, для доступа к ней придётся предварительно включить отображение скрытых файлов&nbsp;(<em>Вид &#8594; Скрытые элементы</em>).</p>
+<p>&nbsp;</p>
+<p><!--TBegin:http://www.wincore.ru/uploads/posts/2016-07/1468320377_image-10271313.jpg|--><a href="http://www.wincore.ru/uploads/posts/2016-07/1468320377_image-10271313.jpg" rel="highslide" class="highslide"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1468320377_image-10271313.jfif" alt="Где находятся файлы Ubuntu в Bash для Windows 10?" title="Где находятся файлы Ubuntu в Bash для Windows 10?"></a><!--TEnd--></p>
+<p>&nbsp;</p>
+<p>Как вы наверное уже поняли, эта папка создаётся для каждого 
+пользователя Windows в отдельности, Так что подсистема Linux у каждого 
+из них своя, при поиске или модификации файлов это нужно учитывать.</p>
+<p>&nbsp;</p>
+<p>К слову, из Bash получить доступ к файлам в Windows даже проще: все 
+диски компьютера автоматически монтируются в привычную для любого 
+пользователя Linux директорию — <em>/mnt</em>. То есть для просмотра содержимого диска С: достаточно ввести команду <em>ls /mnt/c</em>, например.&nbsp;</p>
+<p>&nbsp;</p>
+<p><!--TBegin:http://www.wincore.ru/uploads/posts/2016-07/1468320326_image-12411413.jpg|--><a href="http://www.wincore.ru/uploads/posts/2016-07/1468320326_image-12411413.jpg" rel="highslide" class="highslide"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1468320326_image-12411413.jfif" alt="Где находятся файлы Ubuntu в Bash для Windows 10?" title="Где находятся файлы Ubuntu в Bash для Windows 10?"></a><!--TEnd--></p>
+<p>&nbsp;</p>
+<p>В этом случае нужно помнить о том, что Bash запускается с правами 
+текущего пользователя Windows. То есть если для управления некоторыми 
+файлами или папками вам&nbsp;потребовались права администратора системы,
+ то и Bash нужно перезапустить от имени&nbsp;администратора.</p>
+<p>&nbsp;</p>
+<p>Источник:&nbsp;<!--dle_leech_begin--><a href="http://www.wincore.ru/engine/go.php?url=aHR0cDovL3d3dy5ob3d0b2dlZWsuY29tLzI2MTM4My9ob3ctdG8tYWNjZXNzLXlvdXItdWJ1bnR1LWJhc2gtZmlsZXMtaW4td2luZG93cy1hbmQteW91ci13aW5kb3dzLXN5c3RlbS1kcml2ZS1pbi1iYXNoLw%3D%3D" target="_blank">www.howtogeek.com</a><!--dle_leech_end--></p>   
+    
+ <div class="bannerbottompost"> 
+
+  <script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- WinCore Adaptive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2341767616098055" data-ad-slot="1158360007" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    
+
+   </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+                
+
+    
+    
+    
+    
+              
+
+    
+    
+ 
+
+</div>  
+ 
+   
+
+
+
+
+
+
+</div>    
+
+</div>  
+</div>      
+
+
+
+<div class="mainpostinfo socc clearfix">
+<div class="row">
+
+<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><div class="minititile">Поделиться</div></div> 
+<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+<div class="row">
+<script src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/social-likes.js"></script>
+<div class="social-likes social-likes_visible">
+<div class="social-likes__widget social-likes__widget_vkontakte" title="Поделиться ссылкой во Вконтакте"><span class="social-likes__button social-likes__button_vkontakte"><span class="social-likes__icon social-likes__icon_vkontakte"></span>Вконтакте</span></div>
+<div class="social-likes__widget social-likes__widget_twitter" title="Поделиться ссылкой в Твиттере"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span>Twitter</span></div>
+<div class="social-likes__widget social-likes__widget_facebook" title="Поделиться ссылкой на Фейсбуке"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span>Facebook</span></div>
+<div class="social-likes__widget social-likes__widget_mailru" title="Поделиться ссылкой в Моём мире"><span class="social-likes__button social-likes__button_mailru"><span class="social-likes__icon social-likes__icon_mailru"></span>Мой мир</span></div>
+</div> 
+</div>
+</div>
+
+</div>    
+</div> 
+
+
+
+<div class="mainpostinfo clones clearfix">
+<div class="row">
+ 
+<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><div class="minititile">Читайте также</div></div> 
+<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+<div class="row"><div class="col-lg-4 col-md-4 col-xs-4"><a href="http://www.wincore.ru/advices/4115-kak-ustanovit-bash-v-windows-10-insider-preview.html"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1460130192_image-7402918.jfif" class="img-responsive" alt="Как установить bash в Windows 10 Insider Preview?"></a> <div class="plink"><a href="http://www.wincore.ru/advices/4115-kak-ustanovit-bash-v-windows-10-insider-preview.html">Как установить bash в Windows 10 Insider Preview?</a></div></div><div class="col-lg-4 col-md-4 col-xs-4"><a href="http://www.wincore.ru/advices/3081-kak-sinhronizirovat-izbrannoe-brauzera-microsoft-edge-s-onedrive.html"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1440403074_bezymyannyy-1.jfif" class="img-responsive" alt="Как синхронизировать избранное браузера Microsoft Edge с OneDrive?"></a> <div class="plink"><a href="http://www.wincore.ru/advices/3081-kak-sinhronizirovat-izbrannoe-brauzera-microsoft-edge-s-onedrive.html">Как синхронизировать избранное браузера Microsoft Edge с OneDrive?</a></div></div><div class="col-lg-4 col-md-4 col-xs-4"><a href="http://www.wincore.ru/advices/1595-kak-vklyuchit-skrytuyu-uchetnuyu-zapis-administratora.html"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1399533390_image-2110637.jfif" class="img-responsive" alt="Как включить скрытую учётную запись администратора в Windows 8.1?"></a> <div class="plink"><a href="http://www.wincore.ru/advices/1595-kak-vklyuchit-skrytuyu-uchetnuyu-zapis-administratora.html">Как включить скрытую учётную запись администратора в Windows 8.1?</a></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+<div class="visible-xs-block visible-sm-block clearfix" style="margin-top:-15px;"> 
+<div class="mainpostinfo" style="padding:0 15px;">
+<div class="row">
+ 
+
+    <!-- Yandex.RTB R-A-215082-3 -->
+<div id="yandex_rtb_R-A-215082-3"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-215082-3",
+                renderTo: "yandex_rtb_R-A-215082-3",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+
+</div>
+    </div>
+</div>
+
+
+
+<div class="mainpostinfo comms clearfix">
+<div class="row">
+ 
+<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"><div class="minititile">Комментарии</div></div> 
+<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+
+
+<div class="comment-post">
+<div class="comments-list">
+<ul>
+<a name="comment"></a><form method="post" action="" name="dlemasscomments" id="dlemasscomments"><div id="dle-comments-list">
+<div id="comment-id-5944">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">1 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_12847.jfif" class="img-responsive" alt="pitbull" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5944'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5944" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('pitbull', 'http://www.wincore.ru/user/pitbull/', '0'); return false;" href="http://www.wincore.ru/user/pitbull/">pitbull</a></span>
+<span class="date">4 августа 2016 в 16:10</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5944'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5944" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5944">Не работает данный способ, еще будут идеи?</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5948">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">2 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_2.jfif" class="img-responsive" alt="BigBang" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5948'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5948" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('BigBang', 'http://www.wincore.ru/user/BigBang/', '0'); return false;" href="http://www.wincore.ru/user/BigBang/">BigBang</a></span>
+<span class="date">5 августа 2016 в 07:49</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5948'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5948" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5948"><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Не работает данный способ, еще будут идеи?<!--QuoteEnd--></div><!--QuoteEEnd--><br>Если не работает, либо ты делаешь что-то не так, либо Bash не установлен.</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5950">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">3 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_12847.jfif" class="img-responsive" alt="pitbull" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5950'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5950" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('pitbull', 'http://www.wincore.ru/user/pitbull/', '0'); return false;" href="http://www.wincore.ru/user/pitbull/">pitbull</a></span>
+<span class="date">5 августа 2016 в 09:20</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5950'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5950" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5950"><!--QuoteBegin BigBang --><div class="title_quote">Цитата: BigBang</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Не работает данный способ, еще будут идеи?<!--QuoteEnd--></div><!--QuoteEEnd--><br>Если не работает, либо ты делаешь что-то не так, либо Bash не установлен.<!--QuoteEnd--></div><!--QuoteEEnd--><br>https://i.imgur.com/wFYGuWy.png</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5951">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">4 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_2.jfif" class="img-responsive" alt="BigBang" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5951'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5951" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('BigBang', 'http://www.wincore.ru/user/BigBang/', '0'); return false;" href="http://www.wincore.ru/user/BigBang/">BigBang</a></span>
+<span class="date">5 августа 2016 в 09:36</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5951'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5951" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5951"><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin BigBang --><div class="title_quote">Цитата: BigBang</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Не работает данный способ, еще будут идеи?<!--QuoteEnd--></div><!--QuoteEEnd--><br>Если не работает, либо ты делаешь что-то не так, либо Bash не установлен.<!--QuoteEnd--></div><!--QuoteEEnd--><br>https://i.imgur.com/wFYGuWy.png<!--QuoteEnd--></div><!--QuoteEEnd--><br>Хе-хе,
+ а здесь у тебя как дела обстоят? В меню Пуск есть ярлык Bash на Ubuntu 
+на Windows? Кроме того убедись, что ты смотришь в профиль нужного 
+пользователя - эта папка создаётся для каждого пользователя в 
+отдельности.<br><br><!--dle_image_begin:https://i.yapx.ru/BiaT.jpg|--><a href="https://i.yapx.ru/BiaT.jpg" onclick="return hs.expand(this)"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/BiaT.png" alt="" title="" width="200" height="177"></a><!--dle_image_end--></div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5952">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">5 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_12847.jfif" class="img-responsive" alt="pitbull" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5952'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5952" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('pitbull', 'http://www.wincore.ru/user/pitbull/', '0'); return false;" href="http://www.wincore.ru/user/pitbull/">pitbull</a></span>
+<span class="date">5 августа 2016 в 09:42</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5952'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5952" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5952"><!--QuoteBegin BigBang --><div class="title_quote">Цитата: BigBang</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin BigBang --><div class="title_quote">Цитата: BigBang</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Не работает данный способ, еще будут идеи?<!--QuoteEnd--></div><!--QuoteEEnd--><br>Если не работает, либо ты делаешь что-то не так, либо Bash не установлен.<!--QuoteEnd--></div><!--QuoteEEnd--><br>https://i.imgur.com/wFYGuWy.png<!--QuoteEnd--></div><!--QuoteEEnd--><br>Хе-хе,
+ а здесь у тебя как дела обстоят? В меню Пуск есть ярлык Bash на Ubuntu 
+на Windows? Кроме того убедись, что ты смотришь в профиль нужного 
+пользователя - эта папка создаётся для каждого пользователя в 
+отдельности.<br><br><!--dle_image_begin:https://i.yapx.ru/BiaT.jpg|--><a href="https://i.yapx.ru/BiaT.jpg" onclick="return hs.expand(this)"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/BiaT.png" alt="" title="" width="200" height="177"></a><!--dle_image_end--><!--QuoteEnd--></div><!--QuoteEEnd--><br>Говорю же, баш стоит и работает. А юзер один. А папки нет :(</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5954">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">6 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_2.jfif" class="img-responsive" alt="BigBang" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5954'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5954" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('BigBang', 'http://www.wincore.ru/user/BigBang/', '0'); return false;" href="http://www.wincore.ru/user/BigBang/">BigBang</a></span>
+<span class="date">5 августа 2016 в 09:49</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5954'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5954" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5954"><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Говорю же, баш стоит и работает. А юзер один. А папки нет :(<!--QuoteEnd--></div><!--QuoteEEnd--><br>Ну это фантастика же:) Просмотр скрытых файлов и папок в Проводнике тоже включён? И поиск по дискам папки lxss ничего не даёт?</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-5959">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">7 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_12847.jfif" class="img-responsive" alt="pitbull" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '5959'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5959" class="ignore-select"><span class="ratingtypeplus ignore-select">1</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('pitbull', 'http://www.wincore.ru/user/pitbull/', '0'); return false;" href="http://www.wincore.ru/user/pitbull/">pitbull</a></span>
+<span class="date">5 августа 2016 в 13:19</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '5959'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="5959" class="ignore-select"><span class="ratingtypeplus ignore-select">1</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-5959"><!--QuoteBegin BigBang --><div class="title_quote">Цитата: BigBang</div><div class="quote"><!--QuoteEBegin--><!--QuoteBegin pitbull --><div class="title_quote">Цитата: pitbull</div><div class="quote"><!--QuoteEBegin-->Говорю же, баш стоит и работает. А юзер один. А папки нет :(<!--QuoteEnd--></div><!--QuoteEEnd--><br>Ну это фантастика же:) Просмотр скрытых файлов и папок в Проводнике тоже включён? И поиск по дискам папки lxss ничего не даёт?<!--QuoteEnd--></div><!--QuoteEEnd--><br>Нашёл. Нужно было не только скрытые файлы отметить, но и системные.</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-9242">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">8 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/foto_15280.jfif" class="img-responsive" alt="Павел «Раджа» Фролов" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '9242'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="9242" class="ignore-select"><span class="ratingtypeplus ignore-select">19</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('%CF%E0%E2%E5%EB+%AB%D0%E0%E4%E6%E0%BB+%D4%F0%EE%EB%EE%E2', 'http://www.wincore.ru/user/%CF%E0%E2%E5%EB+%AB%D0%E0%E4%E6%E0%BB+%D4%F0%EE%EB%EE%E2/', '0'); return false;" href="http://www.wincore.ru/user/%CF%E0%E2%E5%EB+%AB%D0%E0%E4%E6%E0%BB+%D4%F0%EE%EB%EE%E2/">Павел «Раджа» Фролов</a></span>
+<span class="date">5 ноября 2017 в 16:43</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '9242'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="9242" class="ignore-select"><span class="ratingtypeplus ignore-select">19</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-9242">Пишу из будущего. Тут
+ после осеннего обновления 2017 убунта ставится из магазина в 
+"\Users\username\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu<br>onWindows_набор_букв\"</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div><div id="comment-id-11985">
+    
+    <li>  
+<div class="comment">
+<div class="comment-order">9 </div>
+<div class="avatar"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/noavatar.png" class="img-responsive" alt="Dipper и Mabel Pines" style="margin-bottom:10px;">
+  <div class="rate111 clearfix"><a href="#" onclick="doCommentsRate('plus', '11985'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal; margin-left:5px;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="11985" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>  
+    
+    </div>
+<div class="comment-text">
+<div class="comment-head">
+<span class="author"><a onclick="ShowProfile('Dipper+%E8+Mabel+Pines', 'http://www.wincore.ru/user/Dipper+%E8+Mabel+Pines/', '0'); return false;" href="http://www.wincore.ru/user/Dipper+%E8+Mabel+Pines/">Dipper и Mabel Pines</a></span>
+<span class="date">6 июля 2019 в 22:22</span>
+<div class="rate222"><a href="#" onclick="doCommentsRate('plus', '11985'); return false;"><span class="label label-info" style="font-size:13px; font-weight:normal;"><span class="glyphicon glyphicon-thumbs-up"></span> <span comments-ratig-layer="11985" class="ignore-select"><span class="ratingtypeplus ignore-select">0</span></span></span></a>
+</div>
+</div>
+<p class="comment-body"></p><div id="comm-id-11985"><!--QuoteBegin Павел «Раджа» Фролов --><div class="title_quote">Цитата: Павел «Раджа» Фролов</div><div class="quote"><!--QuoteEBegin-->Пишу
+ из будущего. Тут после осеннего обновления 2017 убунта ставится из 
+магазина в 
+"\Users\username\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu<br>onWindows_набор_букв\"<!--QuoteEnd--></div><!--QuoteEEnd--><br>Где же ты раньше был? Я часов 5 по системе искал.</div><p></p>
+             
+</div>     
+</div><!-- /.comment -->
+</li>
+    
+
+
+</div>
+<div id="dle-ajax-comments"></div>
+</div></form>
+
+<!--dlenavigationcomments-->
+<li>
+<div class="comment">
+
+    Для того, чтобы оставить комментарий к публикации,  необходимо 
+авторизоваться на сайте под своей учётной записью, предварительно пройдя
+ простую процедуру <a href="http://www.wincore.ru/index.php?do=register">регистрации</a>, или войти, используя аккаунт одной из социальных сетей: 
+     
+	 
+	<a href="https://connect.mail.ru/oauth/authorize?client_id=731088&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dmailru&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" rel="nofollow" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/mailru.gif"></a> 
+	<a href="https://oauth.yandex.ru/authorize?client_id=21af92e1fed8479693ce87feb95f537b&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dyandex&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" rel="nofollow" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/yandex.gif"></a> 
+	<a href="https://accounts.google.com/o/oauth2/auth?client_id=226026673695-salssj15jsvv2t25ihc3tp44bhjku98a.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dgoogle&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" rel="nofollow" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/google_002.gif"></a>
+    
+    <div id="siteauthlink"></div>  
+    
+</div><!-- /.comment -->
+</li>
+</ul>
+</div><!-- /.comments-list -->
+</div><!-- /.comment-post -->
+
+
+
+
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+  
+  </div>
+  
+
+  
+
+  
+  
+  <div class="col-lg-4" style="padding:0px;">
+
+  
+<div class="box1">
+    
+    
+    
+     
+    
+
+<div id="siteauth">
+<h5 style="margin-top:0px;">Авторизация</h5>       
+<div style="margin-bottom:10px;"><a href="http://www.wincore.ru/login.html" style="background:#1D9FDE; color:#fff; padding:8px 17px; margin-right:10px;">Войти</a>
+<a href="http://www.wincore.ru/index.php?do=register">Зарегистрироваться</a></div>
+</div>
+
+
+<div style="margin:20px 0 0 0; border-bottom:none; color:#666; font-size:14px;">
+Войти, используя аккаунт одной из социальных сетей
+<div style="margin-top:7px;">
+    
+    <a href="https://oauth.yandex.ru/authorize?client_id=21af92e1fed8479693ce87feb95f537b&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dyandex&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/yandex_002.gif"></a>
+    <a href="https://connect.mail.ru/oauth/authorize?client_id=731088&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dmailru&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/mailru_002.gif"></a>
+    
+    <a href="https://accounts.google.com/o/oauth2/auth?client_id=226026673695-salssj15jsvv2t25ihc3tp44bhjku98a.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Fwww.wincore.ru%2Findex.php%3Fdo%3Dauth-social%26provider%3Dgoogle&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=8253b27a7dcf3781dd3d306c0757c475&amp;response_type=code" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/google.gif"></a></div>
+</div>
+    
+    
+    
+      
+      
+      </div>
+
+
+
+
+<div class="box" style="display: none !important;">
+    <div style="background:#fff; padding:20px;">
+        
+<script async="" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- WinCore Adaptive -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2341767616098055" data-ad-slot="1158360007" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    
+      
+    </div>  
+</div>  
+
+
+      
+  
+      
+      
+      
+           
+<div class="box">
+<h5>Популярное </h5>
+<div class="list_pop2 clearfix">
+<ul>
+    <a href="http://www.wincore.ru/windows-news/7889-windows-10-zahvatila-milliard-ustroystv.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1585051557_71d40c511988d8c4a741ed1ddca2847b.jfif" class="img-responsive" alt="Windows 10 захватила миллиард устройств"> <div class="link">Windows 10 захватила миллиард устройств</div></li></a>
+<a href="http://www.wincore.ru/games/7887-lego-nasledie-geroev-otpravlyaemsya-v-priklyuchenie-po-znamenitoy-vselennoy.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1585043675_snimok-ekrana-20.png" class="img-responsive" alt="LEGO Наследие героев — спасаем мир от болотной тоски!"> <div class="link">LEGO Наследие героев — спасаем мир от болотной тоски!</div></li></a>
+<a href="http://www.wincore.ru/hardware/7888-kubb-passive-edition-chrome-kompaktnyy-kompyuter-neobychnogo-dizayna.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1585046700_bleujour_kubb_nuc_01.jfif" class="img-responsive" alt="Kubb Passive Edition Chrome — компактный компьютер необычного дизайна"> <div class="link">Kubb Passive Edition Chrome — компактный компьютер необычного дизайна</div></li></a>
+
+</ul>
+</div>
+</div>     
+
+
+
+
+
+
+<div class="box" style="padding-bottom:50px;">
+<h5>Поиск по сайту</h5>
+<form action="" name="searchform" method="post">
+			<input type="hidden" name="do" value="search">
+			<input type="hidden" name="subaction" value="search">
+			<div class="searchblock">
+				<input type="search" id="story" name="story">
+				 <input type="submit" value="">
+			</div>
+		</form>   
+    
+
+</div>
+
+
+<div class="box">
+<h5>Интересное из Microsoft Store</h5>
+<div class="list_pop2 clearfix">
+<ul>
+    <a href="http://www.wincore.ru/games/7863-lonely-mountains-downhill.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1573541675_apps.jfif" class="img-responsive" alt="Lonely Mountains: Downhill — мчимся с горы с ветерком"> <div class="link">Lonely Mountains: Downhill — мчимся с горы с ветерком</div></li></a>
+<a href="http://www.wincore.ru/games/7820-fishing-planet-otpravlyaemsya-na-rybalku.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1565334172_snimok-ekrana-4.png" class="img-responsive" alt="Fishing Planet — отправляемся на рыбалку!"> <div class="link">Fishing Planet — отправляемся на рыбалку!</div></li></a>
+<a href="http://www.wincore.ru/programs/7478-elpy-kombiniruem-zvuki-lesa-vetra-i-dozhdya.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1549889071_bezymyannyy.png" class="img-responsive" alt="Elpy — комбинируем звуки леса, ветра и дождя"> <div class="link">Elpy — комбинируем звуки леса, ветра и дождя</div></li></a>
+<a href="http://www.wincore.ru/programs/7461-atomicclock-tochnye-chasy-dlya-smartfona-plansheta-pk.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1549459095_apps.jfif" class="img-responsive" alt="AtomicClock — точные часы для смартфона, планшета, ПК"> <div class="link">AtomicClock — точные часы для смартфона, планшета, ПК</div></li></a>
+<a href="http://www.wincore.ru/games/7469-goat-simulator-dobralsya-do-microsoft-store.html"><li class="clearfix"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/1549563836_apps.jfif" class="img-responsive" alt="Goat Simulator добрался до Microsoft Store"> <div class="link">Goat Simulator добрался до Microsoft Store</div></li></a>
+
+</ul>
+</div>
+</div>    
+
+
+
+
+ <div class="box">    
+          <h5>Что комментируют</h5>
+      <div class="list_comms clearfix">
+<ul><div class="iComm" id="iComm"><ul class="lastcomm"><a href="http://www.wincore.ru/windows-news/7889-windows-10-zahvatila-milliard-ustroystv.html#comment"><li>
+    <div>Windows 10 захватила миллиард устройств  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>1</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>GLYUKOZA-RULIT</span>
+    </li></a>
+<a href="http://www.wincore.ru/games/7887-lego-nasledie-geroev-otpravlyaemsya-v-priklyuchenie-po-znamenitoy-vselennoy.html#comment"><li>
+    <div>LEGO Наследие героев — спасаем мир от болотной тос...  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>1</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>GLYUKOZA-RULIT</span>
+    </li></a>
+<a href="http://www.wincore.ru/system-design/7421-postclassic-cursors-legkie-svetlye-kursory.html#comment"><li>
+    <div>PostClassic Cursors — лёгкие светлые курсоры  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>1</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>monreis</span>
+    </li></a>
+<a href="http://www.wincore.ru/windows-news/7882-skrinshoty-windows-10x-v-emulyatore.html#comment"><li>
+    <div>Скриншоты: Windows 10X в эмуляторе двухэкранного г...  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>2</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>RevolveR</span>
+    </li></a>
+<a href="http://www.wincore.ru/windows-news/7880-novyy-microsoft-edge-vypuschen-i-dlya-arm.html#comment"><li>
+    <div>Новый Microsoft Edge выпущен и для ARM  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>1</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>RevolveR</span>
+    </li></a>
+<a href="http://www.wincore.ru/system-design/7842-macpac-stilnaya-tema-v-duhe-linux-i-mac.html#comment"><li>
+    <div>macPac — стильная тема в духе Mac  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <span>6</span></div>
+<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span>RevolveR</span>
+    </li></a>
+</ul><!-- .lastcomm --></div> </ul>  </div>
+ </div> 
+
+
+
+
+      
+      
+      
+      
+
+      
+<div class="box">
+<h5>Облако тегов</h5>
+<div class="tag_cloud"><a href="http://www.wincore.ru/tags/Acer/" class="clouds_xsmall" title="Найдено публикаций: 34">Acer</a>, <a href="http://www.wincore.ru/tags/AMD/" class="clouds_xsmall" title="Найдено публикаций: 20">AMD</a>, <a href="http://www.wincore.ru/tags/Anniversary+Update/" class="clouds_xsmall" title="Найдено публикаций: 68">Anniversary Update</a>, <a href="http://www.wincore.ru/tags/Asus/" class="clouds_xsmall" title="Найдено публикаций: 24">Asus</a>, <a href="http://www.wincore.ru/tags/Continuum/" class="clouds_xsmall" title="Найдено публикаций: 27">Continuum</a>, <a href="http://www.wincore.ru/tags/Cortana/" class="clouds_xsmall" title="Найдено публикаций: 51">Cortana</a>, <a href="http://www.wincore.ru/tags/Creators+Update/" class="clouds_xsmall" title="Найдено публикаций: 113">Creators Update</a>, <a href="http://www.wincore.ru/tags/Dell/" class="clouds_xsmall" title="Найдено публикаций: 13">Dell</a>, <a href="http://www.wincore.ru/tags/Fall+Creators+Update/" class="clouds_xsmall" title="Найдено публикаций: 14">Fall Creators Update</a>, <a href="http://www.wincore.ru/tags/HoloLens/" class="clouds_xsmall" title="Найдено публикаций: 36">HoloLens</a>, <a href="http://www.wincore.ru/tags/HP/" class="clouds_xsmall" title="Найдено публикаций: 20">HP</a>, <a href="http://www.wincore.ru/tags/Insider+Preview/" class="clouds_large" title="Найдено публикаций: 468">Insider Preview</a>, <a href="http://www.wincore.ru/tags/Internet+Explorer/" class="clouds_xsmall" title="Найдено публикаций: 40">Internet Explorer</a>, <a href="http://www.wincore.ru/tags/Lenovo/" class="clouds_xsmall" title="Найдено публикаций: 22">Lenovo</a>, <a href="http://www.wincore.ru/tags/LG/" class="clouds_xsmall" title="Найдено публикаций: 13">LG</a>, <a href="http://www.wincore.ru/tags/Lumia/" class="clouds_xsmall" title="Найдено публикаций: 133">Lumia</a>, <a href="http://www.wincore.ru/tags/Microsoft/" class="clouds_small" title="Найдено публикаций: 181">Microsoft</a>, <a href="http://www.wincore.ru/tags/Microsoft+Edge/" class="clouds_xsmall" title="Найдено публикаций: 138">Microsoft Edge</a>, <a href="http://www.wincore.ru/tags/Microsoft+Store/" class="clouds_small" title="Найдено публикаций: 208">Microsoft Store</a>, <a href="http://www.wincore.ru/tags/Nokia/" class="clouds_xsmall" title="Найдено публикаций: 23">Nokia</a>, <a href="http://www.wincore.ru/tags/Nvidia/" class="clouds_xsmall" title="Найдено публикаций: 30">Nvidia</a>, <a href="http://www.wincore.ru/tags/Office/" class="clouds_xsmall" title="Найдено публикаций: 130">Office</a>, <a href="http://www.wincore.ru/tags/Office+Insider/" class="clouds_xsmall" title="Найдено публикаций: 28">Office Insider</a>, <a href="http://www.wincore.ru/tags/OneDrive/" class="clouds_xsmall" title="Найдено публикаций: 53">OneDrive</a>, <a href="http://www.wincore.ru/tags/OneNote/" class="clouds_xsmall" title="Найдено публикаций: 24">OneNote</a>, <a href="http://www.wincore.ru/tags/Outlook/" class="clouds_xsmall" title="Найдено публикаций: 20">Outlook</a>, <a href="http://www.wincore.ru/tags/Rainmeter/" class="clouds_xsmall" title="Найдено публикаций: 18">Rainmeter</a>, <a href="http://www.wincore.ru/tags/Redstone/" class="clouds_xsmall" title="Найдено публикаций: 60">Redstone</a>, <a href="http://www.wincore.ru/tags/Redstone+4/" class="clouds_xsmall" title="Найдено публикаций: 19">Redstone 4</a>, <a href="http://www.wincore.ru/tags/Release+Preview/" class="clouds_xsmall" title="Найдено публикаций: 16">Release Preview</a>, <a href="http://www.wincore.ru/tags/Samsung/" class="clouds_xsmall" title="Найдено публикаций: 26">Samsung</a>, <a href="http://www.wincore.ru/tags/SkyDrive/" class="clouds_xsmall" title="Найдено публикаций: 19">SkyDrive</a>, <a href="http://www.wincore.ru/tags/Skype/" class="clouds_xsmall" title="Найдено публикаций: 108">Skype</a>, <a href="http://www.wincore.ru/tags/Spartan/" class="clouds_xsmall" title="Найдено публикаций: 13">Spartan</a>, <a href="http://www.wincore.ru/tags/Surface/" class="clouds_small" title="Найдено публикаций: 147">Surface</a>, <a href="http://www.wincore.ru/tags/Technical+Preview/" class="clouds_xsmall" title="Найдено публикаций: 61">Technical Preview</a>, <a href="http://www.wincore.ru/tags/Toshiba/" class="clouds_xsmall" title="Найдено публикаций: 16">Toshiba</a>, <a href="http://www.wincore.ru/tags/Windows+10/" class="clouds_xlarge" title="Найдено публикаций: 515">Windows 10</a>, <a href="http://www.wincore.ru/tags/Windows+10+ARM/" class="clouds_xsmall" title="Найдено публикаций: 14">Windows 10 ARM</a>, <a href="http://www.wincore.ru/tags/Windows+10+IoT/" class="clouds_xsmall" title="Найдено публикаций: 14">Windows 10 IoT</a>, <a href="http://www.wincore.ru/tags/Windows+10+Mobile/" class="clouds_medium" title="Найдено публикаций: 307">Windows 10 Mobile</a>, <a href="http://www.wincore.ru/tags/Windows+9/" class="clouds_xsmall" title="Найдено публикаций: 40">Windows 9</a>, <a href="http://www.wincore.ru/tags/Windows+Insider/" class="clouds_xsmall" title="Найдено публикаций: 75">Windows Insider</a>, <a href="http://www.wincore.ru/tags/Windows+Phone/" class="clouds_xsmall" title="Найдено публикаций: 55">Windows Phone</a>, <a href="http://www.wincore.ru/tags/Windows+RT/" class="clouds_xsmall" title="Найдено публикаций: 38">Windows RT</a>, <a href="http://www.wincore.ru/tags/Xbox/" class="clouds_small" title="Найдено публикаций: 139">Xbox</a>, <a href="http://www.wincore.ru/tags/XWidget/" class="clouds_xsmall" title="Найдено публикаций: 14">XWidget</a>, <a href="http://www.wincore.ru/tags/%E0%E4%EC%E8%ED%E8%F1%F2%F0%E8%F0%EE%E2%E0%ED%E8%E5/" class="clouds_xsmall" title="Найдено публикаций: 103">администрирование</a>, <a href="http://www.wincore.ru/tags/%E2%E8%E4%E5%EE/" class="clouds_xsmall" title="Найдено публикаций: 116">видео</a>, <a href="http://www.wincore.ru/tags/%E2%EE%F1%F1%F2%E0%ED%EE%E2%EB%E5%ED%E8%E5/" class="clouds_xsmall" title="Найдено публикаций: 19">восстановление</a>, <a href="http://www.wincore.ru/tags/%E4%F0%E0%E9%E2%E5%F0%FB/" class="clouds_xsmall" title="Найдено публикаций: 51">драйверы</a>, <a href="http://www.wincore.ru/tags/%E8%EA%EE%ED%EA%E8/" class="clouds_xsmall" title="Найдено публикаций: 80">иконки</a>, <a href="http://www.wincore.ru/tags/%EA%EE%ED%F6%E5%EF%F2/" class="clouds_xsmall" title="Найдено публикаций: 62">концепт</a>, <a href="http://www.wincore.ru/tags/%EA%F3%F0%F1%EE%F0%FB/" class="clouds_xsmall" title="Найдено публикаций: 18">курсоры</a>, <a href="http://www.wincore.ru/tags/%EC%EE%ED%EE%E1%EB%EE%EA%E8/" class="clouds_xsmall" title="Найдено публикаций: 25">моноблоки</a>, <a href="http://www.wincore.ru/tags/%ED%E0%F1%F2%F0%EE%E9%EA%E0+%E8%ED%F2%E5%F0%F4%E5%E9%F1%E0/" class="clouds_xsmall" title="Найдено публикаций: 127">настройка интерфейса</a>, <a href="http://www.wincore.ru/tags/%ED%E0%F7%E0%EB%FC%ED%FB%E9+%FD%EA%F0%E0%ED/" class="clouds_xsmall" title="Найдено публикаций: 41">начальный экран</a>, <a href="http://www.wincore.ru/tags/%ED%EE%F3%F2%E1%F3%EA%E8/" class="clouds_xsmall" title="Найдено публикаций: 47">ноутбуки</a>, <a href="http://www.wincore.ru/tags/%EE%E1%ED%EE%E2%EB%E5%ED%E8%E5/" class="clouds_large" title="Найдено публикаций: 485">обновление</a>, <a href="http://www.wincore.ru/tags/%EE%E1%EE%E8/" class="clouds_small" title="Найдено публикаций: 169">обои</a>, <a href="http://www.wincore.ru/tags/%EE%EF%F2%E8%EC%E8%E7%E0%F6%E8%FF/" class="clouds_xsmall" title="Найдено публикаций: 18">оптимизация</a>, <a href="http://www.wincore.ru/tags/%EF%EB%E0%ED%F8%E5%F2%FB/" class="clouds_small" title="Найдено публикаций: 169">планшеты</a>, <a href="http://www.wincore.ru/tags/%F0%E0%E1%EE%F7%E8%E9+%F1%F2%EE%EB/" class="clouds_xsmall" title="Найдено публикаций: 89">рабочий стол</a>, <a href="http://www.wincore.ru/tags/%F1%EA%E8%E4%EA%E8/" class="clouds_xsmall" title="Найдено публикаций: 105">скидки</a>, <a href="http://www.wincore.ru/tags/%F1%EA%E8%ED%FB/" class="clouds_xsmall" title="Найдено публикаций: 108">скины</a>, <a href="http://www.wincore.ru/tags/%F1%EA%F0%E8%ED%F8%EE%F2%FB/" class="clouds_small" title="Найдено публикаций: 154">скриншоты</a>, <a href="http://www.wincore.ru/tags/%F1%EC%E0%F0%F2%F4%EE%ED%FB/" class="clouds_small" title="Найдено публикаций: 162">смартфоны</a>, <a href="http://www.wincore.ru/tags/%F1%F2%E0%F2%E8%F1%F2%E8%EA%E0/" class="clouds_xsmall" title="Найдено публикаций: 40">статистика</a>, <a href="http://www.wincore.ru/tags/%F2%E5%EC%FB/" class="clouds_small" title="Найдено публикаций: 187">темы</a>, <a href="http://www.wincore.ru/tags/%F3%F1%F2%E0%ED%EE%E2%EA%E0/" class="clouds_xsmall" title="Найдено публикаций: 13">установка</a><br><br><a href="http://www.wincore.ru/tags/">Показать все теги</a></div>    
+</div>    
+                    
+                 
+      
+                 
+
+<div class="box">
+<h5>Обсуждается на форуме</h5>
+<div class="list_forum clearfix">
+<ul><ul class="list_comments"><a href="http://www.wincore.ru/forum/cat-apps-and-programs/last/topic-295.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> svhoct от имени пользователя</li></a>
+<a href="http://www.wincore.ru/forum/cat-windows-8-settings-and-optimization/last/topic-389.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Русификатор для Windows 10</li></a>
+<a href="http://www.wincore.ru/forum/cat-windows-8-settings-and-optimization/last/topic-330.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> win 10, без конца обновляется</li></a>
+<a href="http://www.wincore.ru/forum/cat-windows-8-settings-and-optimization/last/topic-374.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Не работает кнопка пуск</li></a>
+<a href="http://www.wincore.ru/forum/cat-windows-8-settings-and-optimization/last/topic-359.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Скорость USB</li></a>
+<a href="http://www.wincore.ru/forum/cat-windows-8-settings-and-optimization/last/topic-24.html"><li><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> Ошибка при выключении компьютера</li></a>
+</ul> </ul>
+</div>
+</div>
+  
+  </div>
+  
+  
+
+  
+</div><!-- /.container -->
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid clerafix">
+<div class="row">
+    
+    
+<div class="visible-xs-block">  
+<div class="yadad">
+
+    <!-- Yandex.RTB R-A-215082-3 -->
+<div id="yandex_rtb_R-A-215082-3"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-215082-3",
+                renderTo: "yandex_rtb_R-A-215082-3",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+    
+</div>    
+</div>
+    
+    <div class="visible-sm-block">  
+<div class="yadad">
+<!-- Yandex.RTB R-A-215082-2 -->
+<div id="yandex_rtb_R-A-215082-2"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-215082-2",
+                renderTo: "yandex_rtb_R-A-215082-2",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+</div>    
+</div>
+    
+<div class="col-lg-12 hidden-sm hidden-xs">
+    
+<div class="yadad">
+
+    
+    <!-- Yandex.RTB R-A-215082-1 -->
+<div id="yandex_rtb_R-A-215082-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-215082-1",
+                renderTo: "yandex_rtb_R-A-215082-1",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+    
+</div>
+    
+</div>
+</div>
+</div>
+  
+      <div class="container-fluid">
+<div class="row">
+  <div class="col-lg-12">
+  
+  
+<div class="footer">
+       <div class="footer22">
+      <div class="footer_top clearfix">
+      
+      
+      
+      
+      <div class="row">
+      <div class="col-lg-3 col-md-4 col-xs-6" style="padding:0px;">
+      
+        <div class="footer_sections">
+          <h6>Разделы сайта</h6>
+          <ul>
+<li><a href="http://www.wincore.ru/windows-news/">Последние новости</a></li>
+<li><a href="http://www.wincore.ru/advices/">Советы и инструкции</a></li>
+<li><a href="http://www.wincore.ru/programs/">Программы и приложения</a></li>
+<li><a href="http://www.wincore.ru/games/">Игры и развлечения</a></li>
+<li><a href="http://www.wincore.ru/system-design/">Оформление системы</a></li>
+<li><a href="http://www.wincore.ru/hardware/">Устройства и железо</a></li>
+          </ul>
+        </div>
+        
+        </div>
+
+      <div class="col-lg-2 col-md-4 col-xs-6" style="padding:0px;">
+
+        <div class="footer_projects">
+          <h6>Проект Wincore</h6>
+          <ul>
+<li><a href="http://www.wincore.ru/about.html">О проекте</a></li>
+<li><a href="http://www.wincore.ru/project-news/">Новости</a></li>
+  <li><a href="http://www.wincore.ru/forum/">Форум</a></li>
+<li><a href="http://www.wincore.ru/index.php?do=feedback">Обратная связь</a></li>
+<li><a href="http://www.wincore.ru/rules.html">Общие правила сайта</a></li>
+  <li><a href="http://www.wincore.ru/rules-comm.html">Правила общения</a></li>
+          </ul>
+        </div>
+        
+        </div>
+ 
+       <div class="col-lg-3 col-md-4 col-xs-12" style="padding:0px;">       
+        
+        <div class="footer_social">
+          <h6>Присоединяйтесь к нам</h6>
+          <ul class="list_social clearfix">
+<li><a href="http://twitter.com/win_core" target="_blank" rel="nofollow"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ico-twitter.png" alt=""></a></li>
+<li><a href="http://vk.com/wincore" target="_blank" rel="nofollow"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ico-vk.png" alt=""></a></li>
+<li><a href="https://www.facebook.com/WinCore-527572740755135/" target="_blank" rel="nofollow"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ico-fb.png" alt=""></a></li>
+<li><a href="https://t.me/wincore" rel="nofollow" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ico-tg.png" alt=""></a></li>
+<li><a href="http://www.wincore.ru/rss.xml" rel="nofollow"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/ico-rss.png" alt=""></a></li>
+          </ul>
+         <a href="http://www.wincore.ru/index.php?do=register" class="link_reg_bot">Зарегистрироваться</a>
+
+        </div>
+        
+        </div>
+
+      <div class="col-lg-4 col-md-12 col-xs-12" style="padding:0px;">
+
+
+<div class="footer_about"><h6>Кратко о проекте</h6>
+<div class="footer_about_cont">Наш сайт создан для тех, кто интересуется
+ всем, что так или иначе связано с актуальными версиями семейства 
+операционных систем Windows. Пользователям сайта доступны программы, 
+обзоры приложений и устройств, новости, полезные статьи и инструкции, 
+темы, оформление ОС и многое другое.</div>
+
+
+
+
+      </div>
+      
+
+            </div>  
+      
+      </div>
+
+</div>
+
+<div class="footer_bottom clearfix">
+<div class="bottom_left">
+Копирование материалов с сайта без указания гиперссылки на www.Wincore.ru запрещено.
+ </div>
+<div class="bottom_right">
+<!--LiveInternet counter--><script type="text/javascript">document.write("<a href='http://www.liveinternet.ru/click' target=_blank rel=nofollow><img src='//counter.yadro.ru/hit?t44.5;r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' border=0 width=31 height=31 alt='' title='LiveInternet'><\/a>")</script><a href="http://www.liveinternet.ru/click" target="_blank" rel="nofollow"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/hit.gif" alt="" title="LiveInternet" width="31" height="31" border="0"></a><!--/LiveInternet-->
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/top100.jcn"></script><a href="https://top100.rambler.ru/home?id=2601335" target="_blank"><img src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/a.gif" title="Rambler's Top100" alt="Rambler's Top100" border="0"></a>
+<noscript>
+<a href="http://top100.rambler.ru/navi/2601335/">
+<img src="http://counter.rambler.ru/top100.cnt?2601335" alt="Rambler's Top100" border="0" />
+</a>
+</noscript>
+<!-- end of Top100 code -->
+</div>
+</div>
+
+</div>
+</div>
+  
+
+    </div>
+        </div>
+        </div>
+    
+    
+    
+
+
+    </div>    
+    
+    
+    <div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter10939696 = new Ya.Metrika({id:10939696, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="%D0%93%D0%B4%D0%B5%20%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%82%D1%81%D1%8F%20%D1%84%D0%B0%D0%B9%D0%BB%D1%8B%20Ubuntu%20%D0%B2%20Bash%20%D0%B4%D0%BB%D1%8F%20Windows%2010_files/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/10939696" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+    
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+    
+    
+
+
+
+
+</div></body></html>
+<!-- DataLife Engine Copyright SoftNews Media Group (http://dle-news.ru) -->

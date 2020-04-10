@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="home_url" content="https://www.comss.ru/">
+<meta name="description" content="Уже сейчас в Windows 10 вы можете запускать Linux дистрибутивы Ubuntu, openSUSE, Debian, Arch Linux и Kali Linux, а в ближайшее время будет реализована поддержка других дистрибутивов">
+<meta name="keywords" content="Microsoft, Windows 10">
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<meta http-equiv="expires" content="Fri, Apr 01 1974 00:00:00 GMT">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="last-modified" content="Wed, 01 Apr 2020 13:19:57 GMT">
+<link rel="shortcut icon" href="https://cdn.comss.net/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.comss.ru/rss.php">
+<title>Как установить и использовать оболочку Linux Bash в Windows 10</title>
+  <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/bootstrap.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/style.css" rel="stylesheet">
+        <link href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/reviews.css" rel="stylesheet">
+
+	
+<link rel="icon" type="image/png" href="https://cdn.comss.net/logo/comss.one-96x96.png" sizes="96x96">
+<style>.clip {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.label-date{background-color:#ccc;display:inline-block}</style>
+
+<script type="text/javascript" async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/watch.js"></script><script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/analytics.js"></script><script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5630239031562496",
+    enable_page_level_ads: true
+  });
+</script>
+  
+<style>.breadcrumb{background-color:#E8E8E8;white-space: nowrap;overflow:hidden;text-overflow:ellipsis;}</style>
+<link rel="canonical" href="https://www.comss.ru/page.php?id=4897">
+
+<meta property="fb:app_id" content="178348975527814">
+<meta property="og:type" content="article">
+<meta itemprop="image" content="https://cdn.comss.net/img/052019/w10-linux.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@comss">
+<meta name="twitter:creator" content="@comss">
+<meta property="og:url" content="https://www.comss.ru/page.php?id=4897">
+<meta property="og:title" content="Как установить и использовать оболочку Linux Bash в Windows 10">
+<meta property="og:description" content="Уже сейчас в Windows 10 вы можете запускать Linux дистрибутивы Ubuntu, openSUSE, Debian, Arch Linux и Kali Linux, а в ближайшее время будет реализована поддержка других дистрибутивов">
+<meta property="og:image" content="https://cdn.comss.net/img/052019/w10-linux.jpg">
+
+<link id="beamerStyles" type="text/css" rel="stylesheet" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/beamer-embed.css"><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script id="beamerSocketScript" type="text/javascript" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/socket.js"></script><script type="text/javascript" async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/embed.js"></script><link rel="prefetch" as="style" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/a_data/lounge.css"><link rel="prefetch" as="script" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/a_data/common.js"><link rel="prefetch" as="script" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/a_data/lounge_002.js"><link rel="prefetch" as="script" href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/a_data/config.js"></head>
+
+<body>
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background:#1D2530;">
+ <div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="navbar-toggle"><a class="beamerButton beamer_beamerSelector beamer_beamerSelectorRelative beamerTrigger"><span class="glyphicon glyphicon-bell" style="color:#fff;font-size:14px;" title="Уведомления"></span><div class="beamer_icon active" style="background-color: rgb(255, 90, 95);">99+</div></a></div>
+<div class="navbar-toggle"><a href="https://www.comss.ru/search"><span class="glyphicon glyphicon-search" style="color:#fff;font-size:14px;" title="Поиск по сайту"></span></a></div>
+
+<a class="navbar-brand" style="margin:0p;padding:0;height:5px;" href="https://www.comss.ru/">
+<img src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/logo51.png" alt="антивирус скачать бесплатно" style="width:51px;heigth:51px;">
+</a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;">Антивирусы <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://www.comss.ru/list.php?c=utils">Бесплатные антивирусы</a></li>
+<li><a href="https://www.comss.ru/list.php?c=InternetSecurity">Комплексные антивирусы</a></li>
+<li><a href="https://www.comss.ru/list.php?c=antivirus">Антивирусы для Windows</a></li>
+<li><a href="https://www.comss.ru/list.php?c=mac_antivirus">Антивирусы для MacOS</a></li>
+<li><a href="https://www.comss.ru/list.php?c=linux_antivirus">Антивирусы для Linux</a></li>
+<li><a href="https://www.comss.ru/list.php?c=corporate_av">Корпоративные решения</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Мобильные антивирусы</li>
+<li><a href="https://www.comss.ru/list.php?c=mobile_antivirus">Антивирусы для Android</a></li>
+<li><a href="https://www.comss.ru/list.php?c=iphone_security">Безопасность iPhone</a></li>
+<li><a href="https://www.comss.ru/list.php?c=palmos">Антивирусы для Palm OS</a></li>
+
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Дополнительные инструменты</li>
+<li><a href="https://www.comss.ru/list.php?c=virus_scanners">Антивирусные сканеры</a></li>
+<li><a href="https://www.comss.ru/list.php?c=bootcd">Загрузочные диски</a></li>
+<li><a href="https://www.comss.ru/list.php?c=antiransomware">Защита от шифровальщиков</a></li>
+<li><a href="https://www.comss.ru/list.php?c=online-antivirus">Онлайн-антивирусы</a></li>
+<li><a href="https://www.comss.ru/list.php?c=updates">Обновления антивирусов</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;">Программы <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://www.comss.ru/list.php?c=firewall">Фаерволы, сетевая защита</a></li>
+<li><a href="https://www.comss.ru/list.php?c=security">Программы безопасности</a></li>
+<li><a href="https://www.comss.ru/list.php?c=backup">Резервное копирование</a></li>
+<li><a href="https://www.comss.ru/list.php?c=recovery">Восстановление данных</a></li>
+<li role="separator" class="divider"></li>
+<li>
+<a href="https://www.comss.ru/list.php?c=browsers">Браузеры и плагины</a>
+</li>
+<li><a href="https://www.comss.ru/list.php?c=vpn">VPN-сервисы, веб-прокси</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="https://www.comss.ru/list.php?c=system_tweak">Оптимизация и настройка</a></li>
+<li><a href="https://www.comss.ru/list.php?c=uninstall">Удаление программ</a></li>
+
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Программы для удаленной работы</li>
+<li><a href="https://www.comss.ru/list.php?c=remote_access">Удаленный доступ</a></li>
+<li><a href="https://www.comss.ru/list.php?c=messenger">Мессенджеры</a></li>
+<li><a href="https://www.comss.ru/page.php?id=7226">Видеоконференции</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;">ОС <span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://www.comss.ru/list.php?c=os">Операционные системы</a></li>
+<li><a href="https://www.comss.ru/list.php?c=bootmanager">Загрузка и установка</a></li>
+<li><a href="https://www.comss.ru/list.php?c=vm_apps">Виртуальные машины, эмуляторы</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="https://www.comss.ru/list.php?c=drivers">Драйверы и обновления</a></li>
+<li><a href="https://www.comss.ru/list.php?c=storage">Обслуживание накопителей</a></li>
+<li><a href="https://www.comss.ru/list.php?c=securedns">Безопасные DNS-серверы</a></li>
+</ul>
+</li>
+    
+    
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;">Обзоры<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://www.comss.ru/page.php?id=2641">Новое на сайте</a></li>
+<li><a href="https://www.comss.ru/list.php?c=reviews">Обзоры и тесты антивирусов</a></li>
+<li><a href="https://www.comss.ru/list.php?c=whatsnew">Обновления программ, что нового</a></li>
+<li><a href="https://www.comss.ru/list.php?c=threats">Угрозы безопасности</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Операционные системы</li>
+<li><a href="https://www.comss.ru/list.php?c=windows">Windows 10: обзоры, обновления</a></li>
+<li><a href="https://www.comss.ru/list.php?c=linux">Linux: обзоры, обновления</a></li>
+<li role="separator" class="divider"></li>
+<li class="dropdown-header">Полезная информация</li>
+<li><a href="https://www.comss.ru/list.php?c=guru">Советы и рекомендации</a></li>
+<li><a href="https://www.comss.ru/page.php?id=6861">Лучший антивирус 2020</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs hidden-lg">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;"><span class="glyphicon glyphicon-triangle-right" style="color:#fff;font-size:20px;" title="Популярное"></span></a>
+<ul class="dropdown-menu">
+<li><a href="https://www.comss.ru/list.php?c=club">Бесплатные лицензии</a></li>
+<li><a href="https://www.comss.ru/list.php?c=windows">#Windows10</a></li>
+
+</ul>
+</li>
+<li><a class="hidden-sm hidden-md" href="https://www.comss.ru/list.php?c=club">Бесплатные лицензии</a></li>
+<li><a class="hidden-sm hidden-md" href="https://www.comss.ru/list.php?c=windows">#Windows10</a></li>
+
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+<li class="hidden-xs">
+                <form class="navbar-form" role="search" action="/search/" accept-charset="UTF-8">
+        <div class="input-group">
+            <input type="text" class="form-control hidden-sm" placeholder="поиск" name="q" style="border-radius:0;height:30px;margin-top:3px;background:#535368;color:#fff;border-style:none;">
+            <div class="input-group-btn">
+                <button class="btn btn-default" style="border-radius:0;height:30px;margin-top:3px;background:#313146;border-style:none;" type="submit"><i class="glyphicon glyphicon-search" style="color:#fff;"></i></button>
+            </div>
+        </div>
+        <div><input type="hidden" id="x" name="x" value="GUEST"></div></form>
+    </li>   
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#eee;"><span class="glyphicon glyphicon-comment hidden-xs" style="color:#fff;font-size:20px;" title="Комментарии и отзывы"></span><span class="hidden-sm hidden-md hidden-lg">Комментарии</span></a>
+<ul class="dropdown-menu">
+<li><a href="https://www.comss.ru/page.php?al=support">Общие вопросы</a></li>
+<li><a href="https://www.comss.ru/list.php?c=comments">Последние комментарии</a></li>
+<li><a href="javascript:gsc('show',  7569)">Обратная связь</a></li>
+</ul>
+</li>
+
+<li class=" hidden-xs"><a class="beamerButton beamer_beamerSelector beamerTrigger"><span class="glyphicon glyphicon-bell" style="color:#fff;font-size:20px;" title="Уведомления"></span><div class="beamer_icon active" style="background-color: rgb(255, 90, 95);">99+</div></a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+<div class="container-fluid" style="background:#E8E8E8;"> 
+        <div class="container" style="padding-left:0px;">
+             <ol class="breadcrumb  hidden-xs" style="padding-left:10px;padding-bottom:0px;margin-bottom:10px;;float:left;">
+                <li>
+                     <a href="https://www.comss.ru/list.php?c=windows">#Windows10</a>
+                </li>
+ <li class="hidden-sm">
+                    Как установить и использовать оболочку Linux Bash в Windows 10 
+                </li>        
+            </ol>
+<ol class="breadcrumb hidden-sm hidden-md hidden-lg" style="padding-left:0px;padding-bottom:0;padding-top:3px;margin-bottom:3px;">
+                <li>
+                     <a href="https://www.comss.ru/list.php?c=windows">#Windows10</a>
+                </li>         
+            </ol>
+
+        </div>
+ </div>
+ <div class="container-fluid" style="background:#F5F5F5;padding-top:15px;padding-bottom:15px;">	
+ <div class="container">
+<div align="center">
+<div style="max-width:728px;display:block;">
+<script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- Mobile_Page_TOP -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5630239031562496" data-ad-slot="7839134185" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div> 
+</div>
+</div>
+</div>
+
+
+ <div class="container">
+            
+            <div class="row" style="padding-bottom:20px;">
+                <div class="col-md-8 col-lg-8">
+                 <h1>Как установить и использовать оболочку Linux Bash в Windows 10</h1>
+				 <div style="margin-top:0px;margin-bottom:15px"><span class="label label-default"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <span class="date">2019-05-07</span></span> <span class="label label-success"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 73856</span> <span class="label" style="font-size:95%;"><a href="#comments">комментарии</a></span></div>
+
+                 <div class="desc">Уже сейчас в Windows 10 вы можете 
+запускать Linux дистрибутивы Ubuntu, openSUSE, Debian, Arch Linux и Kali
+ Linux, а в ближайшее время будет реализована поддержка других 
+дистрибутивов</div>
+<div class="text" id="main">
+<p>
+<img src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/w10-linux.jfif" alt="Как установить и использовать оболочку Linux Bash в Windows 10" style="width:750px;height:auto;">
+</p>
+<div style="margin-top:40px;margin-bottom:40px;">
+<script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-5630239031562496" data-ad-slot="5030933788"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<p>Подсистема Windows для Linux (Windows Subsystem for Linux, WSL), впервые представленная в <a href="https://www.comss.ru/page.php?id=2572">Windows 10</a> версии 1607, стала действительно стабильной функцией в <a href="https://www.comss.ru/page.php?id=4025">Windows 10 (версия 1709)</a>.
+ Теперь пользователи получают среду для тестирования Linux-приложений 
+прямо внутри Windows, которая работает быстрее, чем в виртуальной 
+машине.
+</p>
+
+<h3>Что нужно знать про оболочку Bash в Windows 10</h3>
+
+<p>
+<img data-original="https://cdn.comss.net/img/102018/2019-03-14_1836.jpg" style="width: 750px; height: auto; display: block;" class="img-responsive" alt="Подсистема Windows для Linux (WSL)" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/2019-03-14_1836.jfif">
+</p>
+<p>Функция WSL на самом деле не является виртуальной машиной, 
+контейнером или программным обеспечением Linux, скомпилированным для 
+Windows. Windows 10 предлагает полноценную подсистему Windows 10, 
+предназначенную для запуска программного обеспечения Linux. Подсистема 
+основана на проекте Microsoft Astoria, который первоначально 
+предназначался для запуска приложений Android в Windows.</p>
+
+<div class="well"><a href="https://www.comss.ru/page.php?id=6037">Microsoft добавит полноценное ядро Linux в Windows 10</a></div>
+
+
+<p>WSL можно рассматривать как противоположность Wine. В то время как 
+Wine позволяет вам запускать приложения Windows прямо в Linux, 
+подсистема Windows для Linux позволяет запускать приложения Linux 
+непосредственно в Windows.</p>
+
+<p>При создании среды оболочки на базе Bash Ubuntu, Microsoft работала 
+совместно с компанией Canonical. Оболочка работает поверх подсистемы и 
+технически не является Linux. Linux является основным ядром операционной
+ системы, которое недоступно в подсистеме. Вместо этого функция WSL 
+позволяет запускать оболочку Bash и исполнять такие же бинарные файлы, 
+которые работают в Ubuntu Linux. Многие сторонники открытого 
+программного обеспечения считает, что операционную систем Linux 
+правильно называть именно “GNU/Linux”, потому что на ядре Linux работает
+ много программного обеспечения GNU. Оболочка Bash, которую вы получаете
+ в Windows 10, как раз содержит утилиты GNU и другое программное 
+обеспечение.</p>
+
+<p>Хотя эта функция изначально называлась “Ubuntu Bash в Windows”, она 
+также позволяет запускать Zsh и другие оболочки командной строки. Сейчас
+ поддерживаются и другие дистрибутивы Linux. Вы можете выбрать openSUSE 
+Leap или SUSE Enterprise Server вместо Ubuntu, поддержка Fedora скоро 
+будет реализована.</p>
+
+<p>При использовании оболочки имеются некоторые ограничения. По 
+умолчанию фоновое серверное ПО и графические приложения Linux не 
+поддерживаются. Кроме того, в данной среде работают не все приложения 
+командной строки, потому что функция не идеальна.</p>
+<div class="well"><a href="https://www.comss.ru/page.php?id=5609">Запуск графической оболочки Linux Bash в Windows 10</a></div>
+
+<h3>Как установить Bash в Windows 10</h3>
+
+<p>Данная функция не работает в 32-разрядной версии Windows 10, поэтому убедитесь, что вы используете 64-разрядную версию.</p>
+
+<p>Если вы используете 64-битную версию Windows, то для начала работы перейдите в <strong>Панель управления &gt;  Программы и компоненты &gt; Включение и отключение компонентов Windows</strong>. Отметьте галочкой пункт <strong>Подсистема Windows для Linux</strong> и нажмите кнопку ОК.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/wsl_1.jpg" class="img-responsive" alt="Подсистема Windows для Linux" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/wsl_1.jfif"></figure><p></p>
+
+<p>Затем нажмите “Перезагрузить сейчас”, чтобы перезапустить компьютер и
+ применить изменения. Функция не будет работать до перезагрузки.</p>
+
+<blockquote>
+<p><strong>Примечание</strong>: начиная с Windows 10 (версия 1709), 
+чтобы использовать эту функцию вам больше не нужно включать режим 
+разработчика в приложении Параметры. Вам просто нужно включить 
+подсистему в окне “Компоненты Windows”.</p>
+</blockquote>
+
+<p>После перезагрузки ПК откройте Магазин Microsoft и выполните 
+поисковый запрос “Linux”. Откроется список доступных для установки 
+приложений.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/wsl_2.jpg" class="img-responsive" alt="Магазин Microsoft" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/wsl_2.jfif"></figure><p></p>
+
+<blockquote>
+<p><strong>Примечание</strong>: начиная с Windows 10 (версия 1709), вы 
+больше не сможете устанавливать Ubuntu, выполнив команду bash. Вместо 
+этого вам нужно установить Ubuntu или другой дистрибутив Linux из 
+Магазина Microsoft.</p>
+</blockquote>
+
+<p>Итак, вы увидите список всех дистрибутивов Linux, доступных в 
+Магазине Microsoft. Начиная с Windows 10 (версия 1709), в магазине 
+предлагаются Ubuntu, openSUSE Leap, openSUSE Enterprise, Debian Linux, 
+Arch Linux и Kali Linux.</p>
+
+<p>Чтобы установить конкретный дистрибутив, выберите его и нажмите 
+кнопку “Получить” или “Установить”. В результате запуститься обычная 
+установка, как и в случае с другими приложениями из Магазина Microsoft.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/wsl_3.jpg" class="img-responsive" alt="Установить Ubuntu через Магазин Microsoft" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/wsl_3.jfif"></figure><p></p>
+
+
+<p>Если вы не знаете, какую среду Linux установить, мы рекомендуем 
+Ubuntu. Этот популярный дистрибутив Linux был ранее единственным 
+доступным вариантом, но теперь доступны другие системы Linux для 
+различных нужд пользователей.</p>
+
+<p>Вы также можете установить несколько дистрибутивов Linux, и каждый из
+ них получит свои собственные уникальные ярлыки. Вы даже можете 
+запускать несколько разных дистрибутивов Linux одновременно в разных 
+окнах.</p>
+
+<h3>Как использовать оболочку Bash и устанавливать программное обеспечение Linux</h3>
+
+<p>После успешной установки вы получаете полноценную командную оболочку 
+Bash на основе Ubuntu или другого выбранного дистрибутива Linux.</p>
+
+<p>Поскольку в системах Linux используются одинаковые бинарные файлы, вы можете использовать команды Ubuntu <em>apt</em> или <em>apt-get</em>,
+ чтобы установить программное обеспечение из репозитория Ubuntu. Просто 
+используйте любую команду, которую вы обычно используете в этом 
+дистрибутиве Linux. У вас будет доступ ко всему программному обеспечению
+ командной строки Linux там, хотя некоторые приложения могут работать не
+ идеально.</p>
+
+<p>Чтобы открыть установленную среду Linux, просто откройте меню Пуск и 
+выполните поиск любого дистрибутива, который вы установили. Например, 
+если вы установили Ubuntu, запустите ярлык Ubuntu.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/wsl_4.jpg" class="img-responsive" alt="запустите ярлык Ubuntu" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/wsl_4.jfif"></figure><p></p>
+
+<p>Вы можете закрепить плитку приложения в меню Пуск, на панели задач или разместить ярлык на рабочий стол для быстрого доступа.</p>
+
+<p>При первом запуске среды Linux вам будет предложено ввести имя 
+пользователя и пароль UNIX. Они не должны совпадать с вашим именем 
+пользователя и паролем Windows, и будут использоваться в среде Linux.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/wsl_5.jpg" class="img-responsive" alt="При первом запуске среды Linux" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/wsl_5.jfif"></figure><p></p>
+
+<p>Например, если вы введете “comss” и “qwerty” в качестве своих учетных
+ данных, ваше имя пользователя в среде Linux будет “comss”, а пароль, 
+который вы используете в среде Linux, будет “qwerty”, независимо от 
+имени пользователя и пароля Windows.</p>
+
+<p>Вы можете запустить установленную среду Linux с помощью команды <em>wsl</em>.
+ Если у вас установлено несколько дистрибутивов Linux, вы можете выбрать
+ среду Linux по умолчанию, которую будет запускаться этой командой.</p>
+
+<p>Если у вас установлен Ubuntu, вы также можете запустить команду <em>ubuntu</em> для ее запуска. Для OpenSUSE Leap 42 используйте <em>opensuse-42</em>. Для SUSE Linux Enterprise Server 12 используйте <em>sles-12</em>. Эти команды перечислены на странице каждого дистрибутива Linux в Магазине Microsoft.</p>
+
+<p>Кроме того, вы можете запустить стандартную среду Linux, выполнив команду <em>bash</em>, но Microsoft заявляет, что данный метод устаревает. Это означает, что команда bash может перестать функционировать в будущем.</p>
+
+<p>Если у вас есть опыт использования оболочки Bash в Linux, MacOS или на других платформах, вы будете чувствовать себя уверенно.</p>
+
+<p>В Ubuntu нужно использовать префикс команд <em>sudo</em> чтобы 
+запускать их с правами root. Пользователь “root” на платформах UNIX 
+имеет полный доступ к системе, аналогично “Администратору” в Windows. 
+Файловая система Windows расположена по пути в <em>/mnt/c  </em>в среде оболочки Bash.</p>
+
+<p>В WSL можно использовать привычные команды терминала Linux. Если вы 
+привыкли к стандартной командной строке Windows с ее командами DOS, вот 
+несколько основных команд, общих для Bash и Windows:</p>
+
+<ul>
+	<li>Изменить директорию: <em>cd</em> в Bash, <em>cd</em> или <em>chdir</em> в DOS</li>
+	<li>Показать содержимое директории: <em>ls</em> в Bash, <em>dir</em> в DOS</li>
+	<li>Переместить или переименовать файл: <em>mv</em> в Bash, <em>move</em> и <em>rename</em> в DOS</li>
+	<li>Копировать файл: <em>cp</em> а Bash, <em>copy</em> в DOS</li>
+	<li>Удалить файл: <em>rm</em> в Bash, <em>del </em>или <em>erase</em> в DOS</li>
+	<li>Создать директорию:  <em>mkdir</em> in Bash, <em>mkdir</em> в DOS</li>
+	<li>Использовать текстовые редактор: <em>vi</em> или <em>nano</em> в Bash,  <em>edit</em> в DOS</li>
+</ul>
+
+<p>Важно помнить, что, в отличие от Windows, оболочка Bash и имитирующая
+ ее Linux среда чувствительны к регистру. Другими словами, файл с 
+названием “File.txt” отличается от файла с названием “file.txt”.</p>
+
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/102018/2019-03-14_1839.png" class="img-responsive" alt="Ubuntu" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/2019-03-14_1839.png"></figure><p></p>
+
+<p>Для установки и обновления программного обеспечения среды Ubuntu нужно будет воспользоваться командой <em>apt</em>. Обязательно прикрепите эти команды к <em>sudo</em>, что заставляет их запускаться от пользователя <em>root</em>. Ниже представлены базовые команды apt-get, которые вам нужно знать:</p>
+
+<ul>
+	<li>Загрузить обновленную информацию о доступных пакетах: <em>sudo apt update</em></li>
+	<li>Установить пакет приложения: <em>sudo apt install packagename</em> (замените packagename на название пакета)</li>
+	<li>Удалить пакет приложения: <em>sudo apt remove packagename</em> (замените packagename на название пакета)</li>
+	<li>Выполнить поиск доступных пакетов: <em>sudo apt search word</em> (замените word на ключевое слово в названии или описании пакета)</li>
+	<li>Загрузить и установить новейшие версии установленных пакетов: <em>sudo apt upgrade</em></li>
+</ul>
+
+<p>После того, как вы загрузили и установили приложение, вы можете ввести его имя в оболочку и нажать Enter для его запуска.</p>
+
+<blockquote>
+<p><strong>Примечание</strong>: Программное обеспечение, которое вы 
+устанавливаете в оболочке Bash, ограничено оболочкой Bash. Вы можете 
+получить доступ к этим программам из командной строки, PowerShell или из
+ другого места в Windows, но только если вы запустите команду <em>bash -c</em>.</p>
+</blockquote>
+
+<h3>Дополнительно: установка родного шрифта Ubuntu</h3>
+
+<p>Если вы хотите получить более точный опыт использования Ubuntu в 
+Windows 10, то можете использовать следующую инструкцию, чтобы 
+установить родные шрифты Ubuntu в терминал.</p>
+
+<p>Чтобы установить шрифт, сначала загрузите <a href="http://font.ubuntu.com/" target="_blank">семейство шрифтов Ubuntu</a> с веб-сайта Ubuntu. Откройте загруженный .zip-файл и найдите файл <em>UbuntuMono-R.ttf</em>.
+ Это шрифт Ubuntu с фиксированный шириной, который используется только в
+ терминале. Это единственный шрифт, который вам нужно установить.</p>
+
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/012017/2018-03-15_1252q.png" class="img-responsive" alt="Установка шрифта UbuntuMono-R" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/2018-03-15_1252q.png"></figure><p></p>
+
+
+<p>Дважды щелкните файл <em>UbuntuMono-R.ttf</em>, и вы увидите предварительный просмотр шрифта. Нажмите “Установить”, чтобы установить шрифт в систему.</p>
+
+<p>Чтобы моноширинный шрифт Ubuntu стал доступен в консоли, вам нужно добавить параметр в реестр Windows.</p>
+
+<p>Запустите редактор реестра, используя сочетание <kbd>Windows</kbd> + <kbd>R</kbd>, введя запрос <strong>regedit</strong> и нажав Enter.</p>
+
+<p>Перейдите по следующему пути:</p>
+
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont</pre>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/012017/2018-03-15_12571.png" class="img-responsive" alt="Ubuntu Mono" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/2018-03-15_12571.png"></figure><p></p>
+
+<p>Щелкните правой кнопкой мыши в правой панели и выберите <var>Создать &gt; Строковый параметр</var>. Назовите новое значение 000. Дважды щелкните на строке “000”, которую вы создали, а затем введите <strong>Ubuntu Mono</strong> в качестве значения.</p>
+
+<p></p><figure>
+<img data-original="https://cdn.comss.net/img/012017/2018-03-15_130912.png" class="img-responsive" alt="Ubuntu Mono" style="width: 750px; height: auto; display: block;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/2018-03-15_130912.png"></figure><p></p>
+
+<p>Затем запустите окно Ubuntu, щелкните правой кнопкой мыши строку 
+заголовка и выберите команду “Свойства”. Перейдите на вкладку “Шрифт” и 
+выберите “Ubuntu Mono” в списке шрифта.</p>
+<p><small><em>По материалам <a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/" target="_blank">How-To Geek</a></em></small></p>
+<div style="font-size:90%;font-style:italic;margin-top:10px;margin-bottom:10px">© <a rel="author" href="https://www.comss.ru/list.php?c=windows">Comss.one</a>. </div>
+
+</div>
+				 	
+				 <div style="margin-top:15px;margin-bottom:10px;">
+<script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- Рекомендуем -->
+<script>if (screen && screen.width > 767) {document.write('<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5630239031562496" data-ad-slot="5052656186" data-ad-format="autorelaxed"></ins>');}</script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5630239031562496" data-ad-slot="5052656186" data-ad-format="autorelaxed"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+       </div>  
+<div style="margin-top:15px;margin-bottom:10px;">
+<div class="panel panel-primary" style="border:0;">
+  <div class="panel-heading">
+    <h3 class="panel-title">Последние статьи  #Windows10</h3>
+  </div>
+  <div class="panel-body" style="background:#F5F5F5;">
+ <p class="clip" style="margin:5px 10px 5px 10px;">• <a href="https://www.comss.ru/page.php?id=7262">Новый инструмент Nirsoft для удобной обработки угроз, обнаруженных антивирусом Windows 10</a><br>• <a href="https://www.comss.ru/page.php?id=7198">Microsoft вслед за Google пропустит релиз Microsoft Edge 82</a><br>• <a href="https://www.comss.ru/page.php?id=7260">Microsoft 365 приходит на смену Office 365</a><br>• <a href="https://www.comss.ru/page.php?id=7259">Microsoft выпустила обновления для Windows 10, которые исправляют проблемы с интернетом</a><br>• <a href="https://www.comss.ru/page.php?id=7256">Обновление KB4554364 для Windows 10, версия 1909 и 1903. Исправление ошибки с прокси и VPN</a><br>• <a href="https://www.comss.ru/page.php?id=7257">Обновление KB4554354 (Build 17763.1132) для Windows 10, версия 1809</a><br></p>
+</div>
+</div>
+</div>
+<a name="comments"></a>
+<p><!-- Begin MailChimp Signup Form -->
+<link href="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+</p><div id="mc_embed_signup">
+<form action="https://comss.us16.list-manage.com/subscribe/post?u=2ad67172d0b49809f28b55ebe&amp;id=edc6e9741f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Подписаться на последние обновления</label>
+	<input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="электронная почта" required="">
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2ad67172d0b49809f28b55ebe_85d39db588" tabindex="-1"></div>
+    <div class="clear"><input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+<div><input type="hidden" id="x" name="x" value="GUEST"></div></form>
+</div>
+
+<!--End mc_embed_signup--><p></p>
+
+<h3>Комментарии и отзывы</h3>
+<p>Добавляя комментарий, ознакомьтесь с <a href="https://www.comss.ru/page.php?al=forum_rules">Правилами сообщества</a></p>
+ <p><a href="javascript:gsc('show',  7665)" class="btn btn-default btn-xs" role="button"><strong><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+ Нашли ошибку?</strong></a></p>
+<div id="disqus_thread"><iframe id="dsq-app263" name="dsq-app263" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 9098px !important;" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/a.html" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0"></iframe></div>
+<script>
+function load_disqus( disqus_shortname ) {
+  // Prepare the trigger and target
+  var is_disqus_empty = document.getElementById('disqus_empty'),
+      disqus_target   = document.getElementById('disqus_thread'),
+      disqus_embed    = document.createElement('script'),
+      disqus_hook     = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+
+  // Load script asynchronously only when the trigger and target exist
+  if( disqus_target && is_disqus_empty ) {
+    disqus_embed.type = 'text/javascript';
+    disqus_embed.async = true;
+    disqus_embed.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    disqus_hook.appendChild(disqus_embed);
+    is_disqus_empty.remove();
+  }
+}
+
+/*
+ * Load disqus only when the document is scrolled till the top of the
+ * section where comments are supposed to appear.
+ */
+window.addEventListener('scroll', function(e) {
+  var currentScroll = document.scrollingElement.scrollTop;
+  var disqus_target = document.getElementById('disqus_thread');
+
+  if( disqus_target && (currentScroll > disqus_target.getBoundingClientRect().top - 150) ) {
+    load_disqus('comssru');
+    console.log('Disqus loaded.');
+  }
+}, false);
+</script>
+
+
+</div>
+
+
+       <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
+<div align="center">
+<div style="margin-top:25px;width:300px;">
+<script async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/adsbygoogle.js"></script>
+<!-- reviews300_1 -->
+<script>if (screen && screen.width > 992) {document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5630239031562496" data-ad-slot="5864260582"></ins>');}</script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-5630239031562496" data-ad-slot="5864260582"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div style="margin-top:25px;width:300px;">
+<script>if (screen && screen.width > 992) {document.write('<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"><\/script>');}</script><script type="text/javascript" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/openapi.js"></script>
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">VK.Widgets.Group("vk_groups", {mode: 0, width: "300", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 24226685);</script>
+</div>
+<script>if (screen && screen.width > 992) {document.write('<div style="margin-top:25px;width:300px;"><a href="https://www.comss.ru/page.php?id=3023"><img src="https://img.comss.net/fit-in/300x250/filters:fill(FFFFFF)/action/yandex-antiphish.jpg" alt="Веб-браузер с защитой интернет-банкинга" /></a></div>');}</script><div style="margin-top:25px;width:300px;"><a href="https://www.comss.ru/page.php?id=3023"><img src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/yandex-antiphish.jfif" alt="Веб-браузер с защитой интернет-банкинга" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;" width="0" height="0"></a></div>
+
+
+
+</div>
+
+ </div>
+</div>
+</div>
+
+
+
+<footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" style="opacity:0.6;">
+                  <img src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/comss1.png" alt="comss1" style="width:31px;height:31px;">
+
+<script>
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2854229-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41438934 = new Ya.Metrika({ id:41438934, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/41438934" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript" async="" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/l469yy4m.js"></script>
+
+<script async="">var beamer_config = {product_id : 'AwShAbAC4184',button_position: 'bottom-right',icon: 'bell_lines', language: 'RU',selector: '.beamerButton'};</script><script async="" type="text/javascript" src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/beamer-embed.js" defer="defer"></script>
+
+                   </div>
+                    <div class="col-xs-6 col-sm-10 col-md-10 col-lg-10" style="text-align:right;">
+                        <p>© 2007-2020 COMSS.ONE</p>   
+                    </div>                     
+                </div>                 
+            </div>
+        </footer>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/jquery.js"></script>
+        <script src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/bootstrap.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script>$.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js',function(){
+$('#main .img-responsive').lazyload({ });});</script>
+
+<script src="%D0%9A%D0%B0%D0%BA%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C%20%D0%B8%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83%20Linux%20Bash%20%D0%B2%20Windows%2010_files/runtime.js"></script><script>
+$(function() {
+    $('.carousel.lazy-load').bind('slide.bs.carousel', function (e) {
+        var image = $(e.relatedTarget).find('img[data-src]');
+        image.attr('src', image.data('src'));
+        image.removeAttr('data-src');
+    });
+});
+</script>
+
+
+
+<iframe style="display: none;"></iframe></body></html>
