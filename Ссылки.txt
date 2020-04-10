@@ -1,0 +1,12 @@
+Где находятся файлы Ubuntu в Bash для Windows 10?
+http://www.wincore.ru/advices/4467-gde-nahodyatsya-fayly-ubuntu-v-bash-dlya-windows-10.html
+
+Как установить и использовать оболочку Linux Bash в Windows 10
+https://www.comss.ru/page.php?id=4897
+
+Основы BASH. Часть 1
+https://habr.com/ru/post/47163/
+
+Как работать с файлами, папками и приложениями в Bash на Ubuntu на Windows 10
+https://ip-calculator.ru/blog/ask/kak-rabotat-s-fajlami-papkami-i-prilozheniyami-v-bash-na-ubuntu-na-windows-10/
+
